@@ -3,6 +3,7 @@ name: Aria2-Fast Build x86
 on:
   release:
     types: [published]
+  workflow_dispatch:
 
 
 jobs:
