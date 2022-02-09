@@ -19,7 +19,7 @@ jobs:
         id=$(sudo docker create aria2-mingw)
         sudo docker cp $id:/aria2/src/aria2c.exe ./aria2c-fast_x64.exe
     - name: Upload to release
-      uses: arlenWKX/upload-to-release@master
+      uses: JasonEtco/upload-to-release@master
       with:
         args: aria2c-fast_x64.exe application/vnd.microsoft.portable-executable
       env:
