@@ -1,8 +1,7 @@
 name: Aria2-Fast Build x86
 
-on:
+on: 
   release:
-    types: [published]
   workflow_dispatch:
 
 
@@ -11,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-    - name: build arai2c.exe
+    - name: build arai2c-fast_x86.exe
       run: |
         curl -L -o Dockerfile.mingw "https://raw.githubusercontent.com/aria2/aria2/master/Dockerfile.mingw"
         bash patch_dockerfile_x86.sh
